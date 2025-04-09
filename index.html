@@ -76,11 +76,20 @@
         }
         
         .vinyl {
-            transition: transform 0.5s ease;
+            transition: transform 1.5s ease;
         }
         
         .vinyl:hover {
             transform: rotate(360deg);
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .spin-forever {
+            animation: spin 3s linear infinite;
         }
         
         .pulse {
@@ -149,7 +158,7 @@
     
     <!-- Hero Section with Parallax -->
     <section id="home" class="min-h-screen flex items-center justify-center parallax" style="background-image: url('/assets/abunto_header.jpeg');">
-        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
         <div class="container mx-auto px-6 z-10 text-center scroll-trigger">
             <h1 class="text-7xl md:text-7xl font-bold mb-6 text-neutral-100 typing">ABUNTO</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-bold text-neutral-100">Progressive Disco Rock band creating waves in the music scene</p>
@@ -164,17 +173,17 @@
         </div>
         
         <!-- Floating elements -->
-        <div class="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-pink-500 opacity-50 floating"></div>
-        <div class="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-blue-500 opacity-50 floating floating-delay-1"></div>
-        <div class="absolute bottom-1/4 left-1/3 w-20 h-20 rounded-full bg-purple-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute bottom-1/2 left-1/2 w-10 h-10 rounded-full bg-red-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute bottom-1/5 left-1/4 w-20 h-20 rounded-full bg-yellow-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute bottom-10 left-500 w-10 h-10 rounded-full bg-green-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute bottom-20 left-10 w-24 h-24 rounded-full bg-pink-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute bottom-50 left-10 w-10 h-10 rounded-full bg-purple-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute top-1/3 right-6 w-20 h-20 rounded-full bg-pink-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute top-1/4 right-1/3 w-10 h-10 rounded-full bg-green-500 opacity-50 floating floating-delay-2"></div>
-        <div class="absolute bottom-20 right-10 w-16 h-16 rounded-full bg-yellow-500 opacity-50 floating floating-delay-2"></div>
+        <div class="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-pink-500 opacity-30 floating"></div>
+        <div class="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-blue-500 opacity-30 floating floating-delay-1"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-20 h-20 rounded-full bg-purple-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute bottom-1/2 left-1/2 w-10 h-10 rounded-full bg-red-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute bottom-1/5 left-1/4 w-20 h-20 rounded-full bg-yellow-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute bottom-10 left-500 w-10 h-10 rounded-full bg-green-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute bottom-20 left-10 w-24 h-24 rounded-full bg-pink-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute bottom-50 left-10 w-10 h-10 rounded-full bg-purple-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute top-1/3 right-6 w-20 h-20 rounded-full bg-pink-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute top-1/4 right-1/3 w-10 h-10 rounded-full bg-green-500 opacity-30 floating floating-delay-2"></div>
+        <div class="absolute bottom-20 right-10 w-16 h-16 rounded-full bg-yellow-500 opacity-30 floating floating-delay-2"></div>
     </section>
     
     <!-- About Section -->
@@ -213,7 +222,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Isaac Hermanson</h3>
                     <p class="text-neutral-100 mb-4">Bass</p>
-                    <p class="text-gray-400 text-justify leading-relaxed">The groove master who lays down the foundation with melodic bass lines and beautiful harmonies. Home grown in Alaska, he moved to Fort Collins Colorado to study music at CSU spending all of his time perfecting his craft and becoming a master of his insturment.</p>
+                    <p class="text-gray-400 text-justify leading-relaxed">The groove master who lays down the foundation with melodic bass lines and beautiful harmonies. Home grown in Alaska, he moved to Fort Collins Colorado to study music at CSU spending all of his time perfecting his craft and becoming a master of his instrument.</p>
                 </div>
 
                 <!-- Band Member 4 -->
@@ -224,7 +233,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Aedyn Simon</h3>
                     <p class="text-neutral-100 mb-4">Drums</p>
-                    <p class="text-gray-400 text-justify leading-relaxed">He hits circles with sticks. Only a short drive from Denver Colorado, Aedyn moved to Fort Collins Colorado where he studies computer science and music where he applies his technical skills to help ABUNTO get their name out.</p>
+                    <p class="text-gray-400 text-justify leading-relaxed">He hits circles with sticks (drums and cymbals) bringing energy and creativity from behind the drumset. Only a short drive from Denver Colorado, Aedyn moved to Fort Collins Colorado where he studies computer science and music where he applies his technical skills to help ABUNTO get their name out.</p>
                 </div>
             </div>
             
@@ -259,7 +268,7 @@
                     
                     <div class="mb-8">
                         <h5 class="text-xl font-bold mb-4">Top Tracks</h5>
-                        <a class="space-y-2">
+                        <div class="space-y-2">
                             <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1502s" target="_blank" rel="noopener noreferrer">
                                 <div class="flex items-center p-3 bg-gray-800 rounded-lg hover:bg-gray-700 hover-scale transition-all cursor-pointer">
                                     <div class="w-10 h-10 flex items-center justify-center bg-pink-500 rounded-full mr-4">
@@ -308,16 +317,15 @@
                 
                 <div class="flex justify-center scroll-trigger">
                     <div class="relative vinyl w-64 h-64 md:w-80 md:h-80">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                             alt="Infinite Echoes Album Cover" class="w-full h-full object-cover rounded-full border-8 border-gray-800 shadow-xl">
-                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full border-4 border-gray-800"></div>
+                        <img src="/assets/vinyl.jpeg" alt="Spinning Vinyl" class="w-full h-full object-cover rounded-full border-8 border-gray-800 shadow-xl">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-black rounded-full border-4 border-gray-800"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Tour Dates Section with Pulse Effect -->
+    <!-- Show dates Section with Pulse Effect -->
     <section id="tour" class="py-20 bg-black">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center mb-16 scroll-trigger">Shows</h2>
@@ -331,66 +339,24 @@
                 </div>
                 
                 <div class="space-y-4">
-                    <!-- Tour Date 1 -->
+                    <!-- Show Date 1 -->
                     <div class="bg-gray-900 rounded-xl overflow-hidden hover-scale transition-all scroll-trigger">
                         <div class="p-6 flex flex-col md:flex-row items-center justify-between">
                             <div class="mb-4 md:mb-0">
-                                <p class="text-pink-500 font-bold">TODO DATE</p>
-                                <h4 class="text-xl font-bold">TODO VENUE</h4>
-                                <p class="text-gray-400">TODO CITY,STATE</p>
+                                <p class="text-pink-500 font-bold">Saturday 4/12 | 7:30 PM</p>
+                                <h4 class="text-xl font-bold">2008 West Lake Street</h4>
+                                <p class="text-gray-400">Fort Collins, Colorado</p>
                             </div>
                             <button class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full font-bold pulse">
-                                Get Tickets
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Tour Date 2 -->
-                    <div class="bg-gray-900 rounded-xl overflow-hidden hover-scale transition-all scroll-trigger">
-                        <div class="p-6 flex flex-col md:flex-row items-center justify-between">
-                            <div class="mb-4 md:mb-0">
-                                <p class="text-pink-500 font-bold">TODO DATE</p>
-                                <h4 class="text-xl font-bold">TODO VENUE</h4>
-                                <p class="text-gray-400">TODO CITY, STATE</p>
-                            </div>
-                            <button class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full font-bold pulse">
-                                Get Tickets
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Tour Date 3 -->
-                    <div class="bg-gray-900 rounded-xl overflow-hidden hover-scale transition-all scroll-trigger">
-                        <div class="p-6 flex flex-col md:flex-row items-center justify-between">
-                            <div class="mb-4 md:mb-0">
-                                <p class="text-pink-500 font-bold">TODO DATE</p>
-                                <h4 class="text-xl font-bold">TODO VENUE</h4>
-                                <p class="text-gray-400">TODO CITY, STATE</p>
-                            </div>
-                            <button class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full font-bold pulse">
-                                Get Tickets
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Tour Date 4 -->
-                    <div class="bg-gray-900 rounded-xl overflow-hidden hover-scale transition-all scroll-trigger">
-                        <div class="p-6 flex flex-col md:flex-row items-center justify-between">
-                            <div class="mb-4 md:mb-0">
-                                <p class="text-pink-500 font-bold">TODO DATE</p>
-                                <h4 class="text-xl font-bold">TODO VENUE</h4>
-                                <p class="text-gray-400">TODO CITY, STATE</p>
-                            </div>
-                            <button class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full font-bold pulse">
-                                Get Tickets
+                                FREE House Show
                             </button>
                         </div>
                     </div>
                 </div>
                 
                 <div class="mt-12 text-center scroll-trigger">
-                    <button class="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-3 rounded-full font-bold hover-scale transition-all">
-                        View All Show Dates
+                    <button onclick="location.href='https://www.instagram.com/abunto.band/'" class="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-3 rounded-full font-bold hover-scale transition-all">
+                        View More Dates On Instagram
                     </button>
                 </div>
             </div>
@@ -400,100 +366,96 @@
     <!-- Gallery Section with Hover Effects -->
     <section id="gallery" class="py-20 bg-gradient-to-b from-black to-gray-900">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 scroll-trigger">Gallery</h2>
+            <h2 class="text-5xl font-bold text-center mb-16 scroll-trigger">Gallery</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Gallery Item 1 -->
                 <div class="relative overflow-hidden rounded-xl group scroll-trigger">
-                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Band performing live" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="/assets/aggie_1.jpeg" alt="Aggie Live 1" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-center p-4">
-                            <h3 class="text-xl font-bold mb-2">Live at Glastonbury</h3>
-                            <p class="text-gray-300">2022 Festival Performance</p>
+                            <h3 class="text-xl font-bold mb-2">Live at Aggie Theater</h3>
+                            <p class="text-gray-300">Ghost-Note Opener | 2025</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 2 -->
                 <div class="relative overflow-hidden rounded-xl group scroll-trigger">
-                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Crowd at concert" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="/assets/aggie_2.jpeg" alt="Aggie Live 2" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-center p-4">
-                            <h3 class="text-xl font-bold mb-2">Madison Square Garden</h3>
-                            <p class="text-gray-300">Sold out show in NYC</p>
+                            <h3 class="text-xl font-bold mb-2">Live at Aggie Theater</h3>
+                            <p class="text-gray-300">Ghost-Note Opener | 2025</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 3 -->
                 <div class="relative overflow-hidden rounded-xl group scroll-trigger">
-                    <img src="https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80" 
-                         alt="Band backstage" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="/assets/aggie_3.jpeg" 
+                         alt="Aggie Live 3" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-center p-4">
-                            <h3 class="text-xl font-bold mb-2">Backstage Moments</h3>
-                            <p class="text-gray-300">European Tour 2021</p>
+                            <h3 class="text-xl font-bold mb-2">Live at Aggie Theater</h3>
+                            <p class="text-gray-300">Ghost-Note Opener | 2025</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 4 -->
                 <div class="relative overflow-hidden rounded-xl group scroll-trigger">
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Recording studio" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="/assets/photo_shoot_1.jpeg" alt="Photo Shoot 1" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-center p-4">
-                            <h3 class="text-xl font-bold mb-2">Studio Sessions</h3>
-                            <p class="text-gray-300">Recording "Infinite Echoes"</p>
+                            <h3 class="text-xl font-bold mb-2">Photo Shoot</h3>
+                            <p class="text-gray-300">Aidan & Aedyn | 2025</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 5 -->
                 <div class="relative overflow-hidden rounded-xl group scroll-trigger">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="Concert lighting" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="/assets/photo_shoot_2.jpeg" alt="Photo Shoot 2" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-center p-4">
-                            <h3 class="text-xl font-bold mb-2">Light Show</h3>
-                            <p class="text-gray-300">Visual experience design</p>
+                            <h3 class="text-xl font-bold mb-2">Photo Shoot</h3>
+                            <p class="text-gray-300">ABUNTO | 2025</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 6 -->
                 <div class="relative overflow-hidden rounded-xl group scroll-trigger">
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                    <img src="/assets/photo_shoot_3.jpeg" 
                          alt="Band portrait" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-center p-4">
-                            <h3 class="text-xl font-bold mb-2">Official Portrait</h3>
-                            <p class="text-gray-300">2023 Press Photos</p>
+                            <h3 class="text-xl font-bold mb-2">ABUNTO Portrait</h3>
+                            <p class="text-gray-300">ABUNTO | 2025</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="mt-12 text-center scroll-trigger">
-                <button class="border-2 border-white hover:bg-white hover:text-black text-white px-8 py-3 rounded-full font-bold hover-scale transition-all">
-                    View Full Gallery
+                <button onclick="location.href='https://www.instagram.com/abunto.band/'" class="border-2 border-white hover:bg-white hover:text-black text-white px-8 py-3 rounded-full font-bold hover-scale transition-all">
+                    View More Photos On Instagram
                 </button>
             </div>
         </div>
     </section>
     
     <!-- Contact Section with Interactive Form -->
-    <section id="contact" class="py-20 bg-black">
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 scroll-trigger">Get In Touch</h2>
+            <h2 class="text-5xl font-bold text-center mb-16 scroll-trigger">Get In Touch</h2>
             
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="scroll-trigger">
                     <h3 class="text-2xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400 mb-8">
-                        For booking inquiries, press requests, or just to say hello, fill out the form or reach out directly.
+                    <p class="text-gray-400 text-justify mb-8">
+                        For booking inquiries or just to say hello, fill out the form or reach out directly.
                     </p>
                     
                     <div class="space-y-4">
@@ -503,7 +465,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Email</h4>
-                                <p class="text-gray-400">contact@echohorizon.com</p>
+                                <p class="text-gray-400">abunto.band@gmail.com</p>
                             </div>
                         </div>
                         
@@ -513,7 +475,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Management</h4>
-                                <p class="text-gray-400">+1 (555) 123-4567</p>
+                                <p class="text-gray-400">+1 (720) 376-1542</p>
                             </div>
                         </div>
                         
@@ -523,7 +485,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Office</h4>
-                                <p class="text-gray-400">123 Music Row, Nashville, TN</p>
+                                <p class="text-gray-400">We Are Working On It</p>
                             </div>
                         </div>
                     </div>
@@ -531,53 +493,55 @@
                     <div class="mt-8">
                         <h4 class="font-bold mb-4">Follow Us</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 hover-scale transition-all">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 hover-scale transition-all">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all">
+                            <a href="https://www.instagram.com/abunto.band/" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 hover-scale transition-all">
+                            <a href="https://www.youtube.com/@Abunto-Band" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 hover-scale transition-all">
                                 <i class="fab fa-youtube"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 hover-scale transition-all">
-                                <i class="fab fa-spotify"></i>
+                            <a href="https://abunto.bandcamp.com/track/shloney-demo" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 hover-scale transition-all">
+                                <i class="fab fa-bandcamp"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Contact Form -->
                 <div class="scroll-trigger">
-                    <form class="space-y-6">
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                        <!-- Netlify hidden input -->
+                        <input type="hidden" name="form-name" value="contact">
+                      
+                        <!-- Name -->
                         <div>
                             <label for="name" class="block mb-2 font-medium">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
                         </div>
-                        
+                      
+                        <!-- Email -->
                         <div>
                             <label for="email" class="block mb-2 font-medium">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
                         </div>
-                        
+                      
+                        <!-- Subject -->
                         <div>
                             <label for="subject" class="block mb-2 font-medium">Subject</label>
-                            <select id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                            <select id="subject" name="subject" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
                                 <option value="">Select a subject</option>
                                 <option value="booking">Booking Inquiry</option>
-                                <option value="press">Press Inquiry</option>
                                 <option value="general">General Question</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        
+                      
+                        <!-- Message -->
                         <div>
                             <label for="message" class="block mb-2 font-medium">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"></textarea>
                         </div>
-                        
+                      
+                        <!-- Submit Button -->
                         <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-bold hover-scale transition-all">
                             Send Message
                         </button>
@@ -588,11 +552,11 @@
     </section>
     
     <!-- Newsletter Section -->
-    <section class="py-16 bg-gradient-to-r from-gray-900 to-black">
+    <section class="py-16 bg-black">
         <div class="container mx-auto px-6 max-w-4xl text-center scroll-trigger">
             <h2 class="text-3xl font-bold mb-6">Join Our Mailing List</h2>
             <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Be the first to know about new music, tour dates, and exclusive content. No spam, we promise.
+                Be the first to know about new music, show dates, and exclusive content. No spam, we promise.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
@@ -609,7 +573,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-2xl font-bold gradient-text mb-6 md:mb-0">
-                    ECHO HORIZON
+                    ABUNTO
                 </div>
                 
                 <div class="flex space-x-6 mb-6 md:mb-0">
@@ -622,23 +586,20 @@
                 </div>
                 
                 <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 hover-scale transition-all">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 hover-scale transition-all">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all">
+                    <a href="https://www.instagram.com/abunto.band/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 hover-scale transition-all">
+                    <a href="https://www.youtube.com/@Abunto-Band" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 hover-scale transition-all">
                         <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://abunto.bandcamp.com/track/shloney-demo" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 hover-scale transition-all">
+                        <i class="fab fa-bandcamp"></i>
                     </a>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2023 Echo Horizon. All rights reserved.</p>
+                <p>&copy; 2025 ABUNTO. All rights reserved (We Wish).</p>
             </div>
         </div>
     </footer>
@@ -677,19 +638,6 @@
             setTimeout(() => {
                 vinyl.style.transform = 'rotate(0deg)';
             }, 1000);
-        });
-        
-        // Interactive Form
-        const formInputs = document.querySelectorAll('input, textarea, select');
-        
-        formInputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                input.parentElement.classList.add('ring-2', 'ring-pink-500');
-            });
-            
-            input.addEventListener('blur', () => {
-                input.parentElement.classList.remove('ring-2', 'ring-pink-500');
-            });
         });
         
         // Smooth Scrolling for Navigation
