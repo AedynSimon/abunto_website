@@ -149,7 +149,7 @@
                 <a href="#home" class="hover:text-pink-500 transition-colors">Home</a>
                 <a href="#about" class="hover:text-pink-500 transition-colors">About</a>
                 <a href="#music" class="hover:text-pink-500 transition-colors">Music</a>
-                <a href="#tour" class="hover:text-pink-500 transition-colors">Shows</a>
+                <a href="#shows" class="hover:text-pink-500 transition-colors">Shows</a>
                 <a href="#gallery" class="hover:text-pink-500 transition-colors">Gallery</a>
                 <a href="#contact" class="hover:text-pink-500 transition-colors">Contact</a>
             </div>
@@ -326,7 +326,7 @@
     </section>
     
     <!-- Show dates Section with Pulse Effect -->
-    <section id="tour" class="py-20 bg-black">
+    <section id="shows" class="py-20 bg-black">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center mb-16 scroll-trigger">Shows</h2>
             
@@ -559,12 +559,21 @@
                 Be the first to know about new music, show dates, and exclusive content. No spam, we promise.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
-                <button class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-bold hover-scale transition-all">
+            <form action="https://formsubmit.co/abunto.band@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                <!-- Email input (also used as _replyto) -->
+                <input type="email" name="email" placeholder="Your email address" require class="flex-grow px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                <!-- Submit button -->
+                <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-bold hover-scale transition-all">
                     Subscribe
                 </button>
-            </div>
+
+                <!-- Advanced FormSubmit features -->
+                <input type="hidden" name="_next" value="https://abunto-official.com/thank-you.html">
+                <input type="hidden" name="_subject" value="New Fan Mailing List Signup 🎉">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_autoresponse" value="Thanks for signing up to hear from ABUNTO! We’ll keep you updated with shows, releases, and the funk.">
+                <input type="hidden" name="_template" value="table">
+            </form>
         </div>
     </section>
     
@@ -577,12 +586,12 @@
                 </div>
                 
                 <div class="flex space-x-6 mb-6 md:mb-0">
-                    <a href="#" class="hover:text-pink-500 transition-colors">Home</a>
-                    <a href="#" class="hover:text-pink-500 transition-colors">About</a>
-                    <a href="#" class="hover:text-pink-500 transition-colors">Music</a>
-                    <a href="#" class="hover:text-pink-500 transition-colors">Tour</a>
-                    <a href="#" class="hover:text-pink-500 transition-colors">Gallery</a>
-                    <a href="#" class="hover:text-pink-500 transition-colors">Contact</a>
+                    <a href="#home" class="hover:text-pink-500 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-pink-500 transition-colors">About</a>
+                    <a href="#music" class="hover:text-pink-500 transition-colors">Music</a>
+                    <a href="#shows" class="hover:text-pink-500 transition-colors">Shows</a>
+                    <a href="#gallery" class="hover:text-pink-500 transition-colors">Gallery</a>
+                    <a href="#contact" class="hover:text-pink-500 transition-colors">Contact</a>
                 </div>
                 
                 <div class="flex space-x-4">
