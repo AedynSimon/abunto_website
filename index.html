@@ -45,14 +45,6 @@
         <style>
             /* ------------------- Base Effects ------------------- */
 
-            /* Parallax Background */
-            .parallax {
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
             /* Smooth Scroll-Trigger Entrance */
             .scroll-trigger {
                 opacity: 0;
@@ -211,7 +203,7 @@
         <!-------------------------------->
         <!-- Hero Section w/Parallax Effect -->
         <!-------------------------------->
-        <section id="home" role="region" aria-label="Hero section with site intro and call to action" class="min-h-screen flex items-center justify-center parallax" style="background-image: url('/assets/abunto_hero.jpeg');">
+        <section id="home" role="region" aria-label="Hero section with site intro and call to action" class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat md:bg-fixed" style="background-image: url('/assets/abunto_hero.jpeg');">
 
             <!-- Background Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
