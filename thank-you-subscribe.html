@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abunto | Thank You</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Optional: Meta for SEO and social sharing -->
+        <meta name="description" content="Thanks for reaching out to Abunto. We'll be in touch soon!" />
+
+        <!-- CSS -->
+        <style>
+            /* Infinite Pulse */
+            .pulse {
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+            
+            /* Infinite Gradient Change */
+            .gradient-text {
+                background: linear-gradient(45deg, #ff3366, #ff8a33, #33ff57, #33aaff, #cc33ff);
+                background-size: 400% 400%;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                animation: gradient 15s ease infinite;
+            }
+            @keyframes gradient {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+        </style>
+    </head>
+    
+    <body class="flex items-center justify-center h-screen px-6 bg-black text-white">
+
+        <!-- Thank You Container -->
+        <main class="max-w-xl text-center scroll-trigger" role="region" aria-label="Thank you confirmation message">
+
+            <!-- Heading -->
+            <h1 class="mb-4 text-5xl font-bold gradient-text">
+                Thank You!
+            </h1>
+
+            <!-- Subheading -->
+            <p class="mb-8 text-lg text-gray-400 leading-relaxed">
+                You have subscribed. We'll be in touch as soon as we get back from rehearsal.
+            </p>
+
+            <!-- Call-to-Action Button -->
+            <a href="/" class="inline-block px-6 py-3 font-bold text-pink-500 border-2 border-pink-500 rounded-full transition-all hover:bg-pink-500 hover:text-black hover-scale focus:outline-none focus:ring-2 focus:ring-pink-500 pulse">
+                Back to Home
+            </a>
+        </main>
+    </body>
+</html>
