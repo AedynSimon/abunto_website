@@ -32,6 +32,11 @@
         <meta name="twitter:description" content="Abunto is a progressive disco rock band blending disco, funk, jazz, soul, and rock to create a progressive sound. Listen to our music, check out our shows, and join our party.">
         <meta name="twitter:image" content="https://abunto-official.com/assets/abunto_hero.jpeg">
 
+        <!-- Audio Preview Elements -->
+        <audio id="lover-preview" src="/assets/music/audio/dont-call-me-yr-lover-preview.mp3" preload="auto"></audio>
+        <audio id="piqued-preview" src="/assets/music/audio/piqued-preview.mp3" preload="auto"></audio>
+        <audio id="shloney-preview" src="/assets/music/audio/shloney-preview.mp3" preload="auto"></audio>
+
         <!-- Favicons & External Assets -->
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -416,55 +421,61 @@
                             <div class="space-y-2">
 
                                 <!-- Track 1 -->
-                                <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1502s" target="_blank" rel="noopener noreferrer" aria-label="Play Don't Call Me Yr Lover on YouTube at timestamp 25:02">
-                                    <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
-                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
-                                            <i class="fas fa-play" aria-hidden="true"></i>
+                                <div onmouseenter="playPreview('lover')" onmouseleave="pausePreview('lover')">
+                                    <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1502s" target="_blank" rel="noopener noreferrer" aria-label="Play Don't Call Me Yr Lover on YouTube at timestamp 25:02">
+                                        <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
+                                            <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
+                                                <i class="fas fa-play" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold">
+                                                    1. Don't Call Me Yr Lover
+                                                </p>
+                                                <p class="text-sm text-neutral-300">
+                                                    3:48
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p class="font-bold">
-                                                1. Don't Call Me Yr Lover
-                                            </p>
-                                            <p class="text-sm text-neutral-300">
-                                                3:48
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
 
                                 <!-- Track 2 -->
-                                <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=280s" target="_blank" rel="noopener noreferrer" aria-label="Play Piqued on YouTube at timestamp 4:40">
-                                    <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
-                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
-                                            <i class="fas fa-play" aria-hidden="true"></i>
+                                <div onmouseenter="playPreview('piqued')" onmouseleave="pausePreview('piqued')">
+                                    <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=280s" target="_blank" rel="noopener noreferrer" aria-label="Play Piqued on YouTube at timestamp 4:40">
+                                        <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
+                                            <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
+                                                <i class="fas fa-play" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold">
+                                                    2. Piqued
+                                                </p>
+                                                <p class="text-sm text-neutral-300">
+                                                    3:45
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p class="font-bold">
-                                                2. Piqued
-                                            </p>
-                                            <p class="text-sm text-neutral-300">
-                                                3:45
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
 
                                 <!-- Track 3 -->
-                                <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1176s" target="_blank" rel="noopener noreferrer" aria-label="Play Shloney on YouTube at timestamp 19:36">
-                                    <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
-                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
-                                            <i class="fas fa-play" aria-hidden="true"></i>
+                                <div onmouseenter="playPreview('shloney')" onmouseleave="pausePreview('shloney')">
+                                    <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1176s" target="_blank" rel="noopener noreferrer" aria-label="Play Shloney on YouTube at timestamp 19:36">
+                                        <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
+                                            <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
+                                                <i class="fas fa-play" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold">
+                                                    3. Shloney
+                                                </p>
+                                                <p class="text-sm text-neutral-300">
+                                                    4:53
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p class="font-bold">
-                                                3. Shloney
-                                            </p>
-                                            <p class="text-sm text-neutral-300">
-                                                4:53
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         
@@ -1035,6 +1046,36 @@
                     }
                 });
             });
+
+            // ----------------------------
+            // Audio Preview on Track Hover
+            // ----------------------------
+
+            // Play short audio preview when user hovers over a track
+            function playPreview(id) {
+                const audio = document.getElementById(`${id}-preview`);
+                if (audio) {
+                audio.currentTime = 0;
+                audio.play();
+                }
+            }
+
+            // Pauses and resets the audio preview when the user stops hovering
+            function pausePreview(id) {
+                const audio = document.getElementById(`${id}-preview`);
+                if (audio) {
+                    const fadeOut = setInterval(() => {
+                        if (audio.volume > 0.1) {
+                            audio.volume -= 0.1;
+                        } else {
+                            clearInterval(fadeOut);
+                            audio.pause();
+                            audio.currentTime = 0;
+                            audio.volume = 1; // reset for next play
+                        }
+                    }, 30);
+                }
+            }
         </script>
     </body>
 </html>
