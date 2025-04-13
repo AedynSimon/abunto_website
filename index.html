@@ -72,7 +72,7 @@
             }
             .hover-shadow-scale:hover {
                 transform: scale(1.03);
-                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             }
             
             /* Rotate */
@@ -111,7 +111,7 @@
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                animation: gradient 15s ease infinite;
+                animation: gradient 10s ease infinite;
             }
             @keyframes gradient {
                 0% { background-position: 0% 50%; }
@@ -124,12 +124,12 @@
     <!-------------------------------->
     <!-- Body -->
     <!-------------------------------->
-    <body class="overflow-x-hidden bg-black font-mono text-white">
+    <body class="overflow-x-hidden bg-neutral-900 font-mono text-white">
 
         <!-------------------------------->
         <!-- Navigation -->
         <!-------------------------------->
-        <nav class="fixed z-50 w-full bg-black bg-opacity-50 backdrop-blur-sm backdrop-filter" role="navigation" aria-label="Main site navigation">
+        <nav class="fixed z-50 w-full bg-neutral-900 bg-opacity-70 backdrop-blur-sm backdrop-filter" role="navigation" aria-label="Main site navigation">
             
             <!-- Navbar Content Container -->
             <div class="container px-6 py-4">
@@ -146,22 +146,22 @@
 
                     <!-- Desktop Navigation Menu -->
                     <div class="hidden md:flex space-x-8" role="navigation" aria-label="Desktop site navigation">
-                        <a href="#home" class="transition-colors hover:text-pink-500 hover-scale" aria-label="Go to homepage section">
+                        <a href="#home" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to homepage section">
                             Home
                         </a>
-                        <a href="#about" class="transition-colors hover:text-pink-500 hover-scale" aria-label="Go to about section">
+                        <a href="#about" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to about section">
                             About
                         </a>
-                        <a href="#music" class="transition-colors hover:text-pink-500 hover-scale" aria-label="Go to music section">
+                        <a href="#music" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to music section">
                             Music
                         </a>
-                        <a href="#shows" class="transition-colors hover:text-pink-500 hover-scale" aria-label="Go to shows section">
+                        <a href="#shows" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to shows section">
                             Shows
                         </a>
-                        <a href="#gallery" class="transition-colors hover:text-pink-500 hover-scale" aria-label="Go to gallery section">
+                        <a href="#gallery" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to gallery section">
                             Gallery
                         </a>
-                        <a href="#contact" class="transition-colors hover:text-pink-500 hover-scale" aria-label="Go to contact section">
+                        <a href="#contact" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to contact section">
                             Contact
                         </a>
                     </div>
@@ -178,22 +178,22 @@
             <!-- Mobile Navigation Menu (Dropdown) -->
             <div id="mobile-menu" class="hidden md:hidden px-6 py-4" role="navigation" aria-label="Mobile site navigation">
                 <div class="flex flex-col space-y-4">
-                    <a href="#home" class="transition-colors hover:text-pink-500" aria-label="Go to homepage section">
+                    <a href="#home" class="transition-colors hover:text-blue-500" aria-label="Go to homepage section">
                         Home
                     </a>
-                    <a href="#about" class="transition-colors hover:text-pink-500" aria-label="Go to about section">
+                    <a href="#about" class="transition-colors hover:text-blue-500" aria-label="Go to about section">
                         About
                     </a>
-                    <a href="#music" class="transition-colors hover:text-pink-500" aria-label="Go to music section">
+                    <a href="#music" class="transition-colors hover:text-blue-500" aria-label="Go to music section">
                         Music
                     </a>
-                    <a href="#shows" class="transition-colors hover:text-pink-500" aria-label="Go to shows section">
+                    <a href="#shows" class="transition-colors hover:text-blue-500" aria-label="Go to shows section">
                         Shows
                     </a>
-                    <a href="#gallery" class="transition-colors hover:text-pink-500" aria-label="Go to gallery section">
+                    <a href="#gallery" class="transition-colors hover:text-blue-500" aria-label="Go to gallery section">
                         Gallery
                     </a>
-                    <a href="#contact" class="transition-colors hover:text-pink-500" aria-label="Go to contact section">
+                    <a href="#contact" class="transition-colors hover:text-blue-500" aria-label="Go to contact section">
                         Contact
                     </a>
                 </div>
@@ -224,12 +224,12 @@
                 <div class="flex justify-center space-x-4">
 
                     <!-- Instagram Button -->
-                    <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-white transition-all rounded-full bg-pink-600 hover:bg-pink-500 hover-scale transition duration-300 ease-in-out" aria-label="Go to Abunto Instagram page">
+                    <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-white transition-all rounded-full bg-blue-500 hover:bg-blue-400 hover-scale transition duration-300 ease-in-out" aria-label="Go to Abunto Instagram page">
                         Instagram
                     </a>
 
                     <!-- Shows Button -->
-                    <a href="#shows" class="inline-block px-8 py-3 font-bold text-white transition-all border-2 border-white rounded-full hover:bg-white hover:text-black hover-scale transition duration-300 ease-in-out" aria-label="Go to shows section">
+                    <a href="#shows" class="inline-block px-8 py-3 font-bold transition-all border-2 border-white rounded-full hover:bg-white hover:text-black hover-scale transition duration-300 ease-in-out" aria-label="Go to shows section">
                         Shows
                     </a>
                 </div>
@@ -239,13 +239,13 @@
         <!-------------------------------->
         <!-- About Section -->
         <!-------------------------------->
-        <section id="about" class="py-20 bg-gradient-to-b from-black to-gray-900" aria-label="About section with member cards and band story">
+        <section id="about" class="py-20 bg-neutral-100" aria-label="About section with member cards and band story"> <!-- bg-gradient-to-b from-black to-gray-900 -->
 
             <!-- Outer Container -->
             <div class="container px-6 mx-auto">
 
                 <!-- Section Title -->
-                <h2 class="mb-16 text-5xl font-bold text-center scroll-trigger">
+                <h2 class="mb-16 text-6xl font-bold text-black text-center scroll-trigger">
                     About
                 </h2>
 
@@ -263,15 +263,15 @@
                         </figure>
 
                         <!-- Name & Role -->
-                        <h3 id="jenison-name" class="mb-2 text-2xl font-bold">
+                        <h3 id="jenison-name" class="mb-2 text-2xl font-bold text-black">
                             Jenison
                         </h3>
-                        <p class="mb-4 text-neutral-100">
+                        <p class="mb-4 text-neutral-900">
                             Guitar / Vocals
                         </p>
 
                         <!-- Bio -->
-                        <p class="text-justify leading-relaxed text-gray-400">
+                        <p class="text-justify leading-relaxed text-neutral-500">
                             Jenison wrangles tone like a mad scientist and slings riffs with a grin sharp enough to cut tape. Raised listening to weirdo pop and garage rock in northern California, he crawled into the Colorado music scene with two bands, spilling fuzz and melody in equal amounts. He fronts Abunto whilst designing the flyers, running socials, and crafting songs. He is currently sharpening his teeth at CSU in jazz guitar and graphic design. Because chaos needs structure. Or maybe the other way around . . .
                         </p>
                     </article>
@@ -285,15 +285,15 @@
                         </figure>
 
                         <!-- Name & Role -->
-                        <h3 id="aidan-name" class="mb-2 text-2xl font-bold">
+                        <h3 id="aidan-name" class="mb-2 text-2xl font-bold text-black">
                             Aidan Flanagan
                         </h3>
-                        <p class="mb-4 text-neutral-100">
+                        <p class="mb-4 text-neutral-900">
                             Keys / Piano
                         </p>
                         
                         <!-- Bio -->
-                        <p class="text-justify leading-relaxed text-gray-400">
+                        <p class="text-justify leading-relaxed text-neutral-500">
                             Virtuoso pianist known for blistering solos and innovative licks that push the boundaries of funk disco. Raised in a small igloo in Alaska, he moved to Fort Collins Colorado to study neuroscience and music at CSU incorporating his knowledge of psychology with his expressive playing to tickle your brain while he tickles the ivories.
                         </p>
                     </article>
@@ -307,15 +307,15 @@
                         </figure>
 
                         <!-- Name & Role -->
-                        <h3 id="isaac-name" class="mb-2 text-2xl font-bold">
+                        <h3 id="isaac-name" class="mb-2 text-2xl font-bold text-black">
                             Isaac Hermanson
                         </h3>
-                        <p class="mb-4 text-neutral-100">
+                        <p class="mb-4 text-neutral-900">
                             Bass
                         </p>
 
                         <!-- Bio -->
-                        <p class="text-justify leading-relaxed text-gray-400">
+                        <p class="text-justify leading-relaxed text-neutral-500">
                             The groove master who lays down the foundation with melodic bass lines and beautiful harmonies. Home grown in Alaska, he moved to Fort Collins Colorado to study music at CSU spending all of his time perfecting his craft and becoming a master of his instrument. He is the youngest person to ever win a nobel prize for his well known ability to be a "human clock".
                         </p>
                     </div>
@@ -329,15 +329,15 @@
                         </figure>
 
                         <!-- Name & Role -->
-                        <h3 id="aedyn-name" class="mb-2 text-2xl font-bold">
+                        <h3 id="aedyn-name" class="mb-2 text-2xl font-bold text-black">
                             Aedyn Simon
                         </h3>
-                        <p class="mb-4 text-neutral-100">
+                        <p class="mb-4 text-neutral-900">
                             Drums
                         </p>
 
                         <!-- Bio -->
-                        <p class="text-justify leading-relaxed text-gray-400">
+                        <p class="text-justify leading-relaxed text-neutral-500">
                             He hits circles with sticks bringing energy and creativity from behind the drumset. Only a short drive from Denver Colorado, Aedyn moved to Fort Collins Colorado where he studies computer science and music. His greatest challenege as a computer science major and music minor is the yearly shower . . .
                         </p>
                     </div>
@@ -350,21 +350,21 @@
                     <div class="mx-auto mt-20 max-w-4xl scroll-trigger">
 
                         <!-- Sub Heading -->
-                        <h3 class="text-4xl font-bold text-center mb-6">
+                        <h3 class="text-5xl font-bold text-black text-center mb-6">
                             Our Story
                         </h3>
 
                         <!-- Introductory Blurb -->
-                        <p class="text-center text-gray-400 mb-6">
+                        <p class="text-center text-neutral-500 mb-6">
                             Formed in September of 2024, Abunto quickly rose from small club gigs and house shows to major stages with their unique blend of funk, disco, rock, and jazz.
                         </p>
                     
                         <!-- Quote Box -->
-                        <blockquote class="p-8 bg-gray-800 bg-opacity-50 rounded-xl hover-shadow-scale" aria-label="Quote from Jenison Brown">
-                            <p class="text-justify text-gray-300 mb-4">
+                        <blockquote class="p-8 bg-neutral-900 rounded-xl hover-shadow-scale" aria-label="Quote from Jenison Brown">
+                            <p class="text-justify mb-4">
                                 "We started as four friends in the CSU jazz program. After jamming together, we knew we had something unique. We are all constantly pushing ourselves to be the best musicians we can to create the best music we can.”
                             </p>
-                            <footer class="text-right font-bold text-pink-500">
+                            <footer class="text-right font-bold text-blue-500">
                                 - Jenison Brown
                             </footer>
                         </blockquote>
@@ -376,13 +376,13 @@
         <!-------------------------------->
         <!-- Music Section -->
         <!-------------------------------->
-        <section id="music" class="py-20 bg-gradient-to-b from-gray-900 to-black" aria-label="Music section with featured tracks and band links">
+        <section id="music" class="py-20 bg-black" aria-label="Music section with featured tracks and band links">
             
             <!-- Outer Container -->
             <div class="container px-6 mx-auto">
 
                 <!-- Section Title -->
-                <h2 class="mb-16 text-5xl font-bold text-center scroll-trigger">
+                <h2 class="mb-16 text-6xl font-bold text-center scroll-trigger">
                     Music
                 </h2>
                 
@@ -395,19 +395,19 @@
                     <div class="scroll-trigger">
 
                         <!-- Favorite Track Info -->
-                        <h3 class="mb-6 text-3xl font-bold">
+                        <h3 class="mb-6 text-4xl font-bold">
                             Our Favorite Track
                         </h3>
-                        <h4 class="mb-4 text-2xl text-pink-500" aria-label="Track title: Don't Call Me Yr Lover">
+                        <h4 class="mb-4 text-2xl lg text-blue-500 md:text-3xl" aria-label="Track title: Don't Call Me Yr Lover">
                             "Don't Call Me Yr Lover" - 2025
                         </h4>
-                        <p class="mb-8 text-gray-400">
+                        <p class="mb-8 text-neutral-100">
                             This is our most recent song to date representing where we currently are creatively.
                         </p>
                         
                         <!-- Top Tracks List -->
                         <div class="mb-8" aria-label="List of featured Abunto tracks">
-                            <h5 class="mb-4 text-xl font-bold">
+                            <h5 class="mb-4 text-xl font-bold md:text-3xl">
                                 Top Tracks
                             </h5>
 
@@ -416,15 +416,15 @@
 
                                 <!-- Track 1 -->
                                 <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1502s" target="_blank" rel="noopener noreferrer" aria-label="Play Don't Call Me Yr Lover on YouTube at timestamp 25:02">
-                                    <div class="flex items-center p-3 bg-gray-800 rounded-lg hover:bg-gray-700 hover-scale transition-all">
-                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-pink-500">
+                                    <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
+                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
                                             <i class="fas fa-play" aria-hidden="true"></i>
                                         </div>
                                         <div>
                                             <p class="font-bold">
                                                 1. Don't Call Me Yr Lover
                                             </p>
-                                            <p class="text-sm text-gray-400">
+                                            <p class="text-sm text-neutral-300">
                                                 3:48
                                             </p>
                                         </div>
@@ -433,15 +433,15 @@
 
                                 <!-- Track 2 -->
                                 <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=280s" target="_blank" rel="noopener noreferrer" aria-label="Play Piqued on YouTube at timestamp 4:40">
-                                    <div class="flex items-center p-3 bg-gray-800 rounded-lg hover:bg-gray-700 hover-scale transition-all">
-                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-pink-500">
+                                    <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
+                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
                                             <i class="fas fa-play" aria-hidden="true"></i>
                                         </div>
                                         <div>
                                             <p class="font-bold">
                                                 2. Piqued
                                             </p>
-                                            <p class="text-sm text-gray-400">
+                                            <p class="text-sm text-neutral-300">
                                                 3:45
                                             </p>
                                         </div>
@@ -450,15 +450,15 @@
 
                                 <!-- Track 3 -->
                                 <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1176s" target="_blank" rel="noopener noreferrer" aria-label="Play Shloney on YouTube at timestamp 19:36">
-                                    <div class="flex items-center p-3 bg-gray-800 rounded-lg hover:bg-gray-700 hover-scale transition-all">
-                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-pink-500">
+                                    <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
+                                        <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
                                             <i class="fas fa-play" aria-hidden="true"></i>
                                         </div>
                                         <div>
                                             <p class="font-bold">
                                                 3. Shloney
                                             </p>
-                                            <p class="text-sm text-gray-400">
+                                            <p class="text-sm text-neutral-300">
                                                 4:53
                                             </p>
                                         </div>
@@ -470,16 +470,16 @@
                         <!-- Streaming Platform Buttons -->
                         <div class="flex space-x-4" role="group" aria-label="Streaming platform links">
 
-                            <!-- Bandcamp Button -->
-                            <a href="https://abunto.bandcamp.com/track/shloney-demo" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-2 font-bold rounded-full bg-pink-600 hover:bg-pink-500 hover-scale transition-all" aria-label="Listen to Abunto on Bandcamp">
-                                <i class="fab fa-bandcamp mr-2" aria-hidden="true"></i>
-                                LISTEN TO US ON BANDCAMP
-                            </a>
-
                             <!-- YouTube Button -->
-                            <a href="https://www.youtube.com/@Abunto-Band" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-2 font-bold rounded-full bg-blue-600 hover:bg-blue-500 hover-scale transition-all" aria-label="Listen to Abunto on YouTube">
+                            <a href="https://www.youtube.com/@Abunto-Band" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-2 font-bold rounded-full bg-blue-500 hover:bg-blue-400 hover-scale transition-all" aria-label="Listen to Abunto on YouTube">
                                 <i class="fab fa-youtube mr-2" aria-hidden="true"></i>
                                 LISTEN TO US ON YOUTUBE
+                            </a>
+
+                            <!-- Bandcamp Button -->
+                            <a href="https://abunto.bandcamp.com/track/shloney-demo" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-2 font-bold border-2 rounded-full border-white hover:bg-white hover:text-black hover-scale transition transition-all duration-300 ease-in-out" aria-label="Listen to Abunto on Bandcamp">
+                                <i class="fab fa-bandcamp mr-2" aria-hidden="true"></i>
+                                LISTEN TO US ON BANDCAMP
                             </a>
                         </div>
                     </div>
@@ -504,13 +504,13 @@
         <!-------------------------------->
         <!-- Shows Section -->
         <!-------------------------------->
-        <section id="shows" class="py-20 bg-black" aria-label="Shows section with upcoming shows and events">
+        <section id="shows" class="py-20 bg-neutral-100" aria-label="Shows section with upcoming shows and events">
 
             <!-- Outer Container -->
             <div class="container px-6 mx-auto">
 
                 <!-- Section Title -->
-                <h2 class="mb-16 text-5xl font-bold text-center scroll-trigger">
+                <h2 class="mb-16 text-5xl font-bold text-black text-center scroll-trigger">
                     Shows
                 </h2>
                 
@@ -519,10 +519,10 @@
 
                     <!-- Section Intro -->
                     <div class="mb-12 text-center scroll-trigger" aria-label="Upcoming Abunto shows and events introduction">
-                        <h3 class="mb-6 text-2xl font-bold">
+                        <h3 class="mb-6 text-2xl font-bold text-neutral-900">
                             Upcoming Shows / Events
                         </h3>
-                        <p class="mb-8 text-gray-400">
+                        <p class="mb-8 text-neutral-500">
                             Join us as we bring the Abunto experience to venues, parties, and events in your area. Special guests at select shows.
                         </p>
                     </div>
@@ -531,27 +531,27 @@
                     <div class="space-y-4" role="list" aria-label="List of upcoming Abunto shows">
 
                         <!-- Show Date 1 -->
-                        <article class="bg-gray-900 rounded-xl overflow-hidden hover-scale transition-all scroll-trigger" role="listitem" aria-labelledby="show-412-heading">
+                        <article class="bg-black rounded-xl overflow-hidden hover-scale transition-all scroll-trigger" role="listitem" aria-labelledby="show-52-heading">
                             
                             <!-- Show Box -->
                             <div class="flex flex-col items-center justify-between p-6 md:flex-row">
 
                                 <!-- Show Info -->
                                 <div class="mb-4 text-center md:text-left md:mb-0">
-                                    <time datetime="2025-05-2T19:30" class="font-bold text-pink-500" aria-label="May 2nd 2025 at 7:30 PM">
+                                    <time datetime="2025-05-2T19:30" class="font-bold text-blue-500" aria-label="May 2nd 2025 at 7:30 PM">
                                         Friday May 2nd, 2025 | 7:30 PM
                                     </time>
                                     <h4 id="show-412-heading" class="text-xl font-bold">
                                         254 Linden St | The Coast
                                     </h4>
-                                    <p class="text-gray-400">
+                                    <p class="text-neutral-300">
                                         Fort Collins, Colorado
                                     </p>
                                 </div>
 
                                 <!-- Tagline Button -->
                                 <a href="/assets/shows/TODO.jpeg" target="_blank" rel="noopener noreferrer">
-                                    <button class="px-6 py-2 font-bold rounded-full bg-pink-600 hover:bg-pink-500 pulse">
+                                    <button class="px-6 py-2 font-bold rounded-full bg-blue-500 hover:bg-blue-400 pulse">
                                         Tickets not available yet
                                     </button>
                                 </a>
@@ -561,7 +561,7 @@
                     
                     <!-- Call-to-Action Button -->
                     <div class="mt-12 text-center scroll-trigger">
-                        <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-pink-500 border-2 border-pink-500 rounded-full hover:bg-pink-500 hover:text-white hover-scale transition-all" aria-label="See more Abunto shows and event dates on Instagram">
+                        <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-blue-500 border-2 border-blue-500 rounded-full hover:bg-blue-500 hover:text-white hover-scale transition-all" aria-label="See more Abunto shows and event dates on Instagram">
                             View More Dates On Instagram
                         </a>
                     </div>
@@ -572,13 +572,13 @@
         <!-------------------------------->
         <!-- Gallery Section -->
         <!-------------------------------->
-        <section id="gallery" class="py-20 bg-gradient-to-b from-black to-gray-900" aria-label="Band photo and performance gallery section">
+        <section id="gallery" class="py-20 bg-neutral-100" aria-label="Band photo and performance gallery section"> <!-- bg-gradient-to-b from-black to-gray-900 -->
             
             <!-- Outer Container -->
             <div class="container px-6 mx-auto">
 
                 <!-- Section Title -->
-                <h2 class="text-5xl font-bold text-center mb-16 scroll-trigger">
+                <h2 class="text-5xl font-bold text-black text-center mb-16 scroll-trigger">
                     Gallery
                 </h2>
                 
@@ -702,7 +702,7 @@
 
             <!-- Call-to-Action Button -->
             <div class="mt-12 text-center scroll-trigger">
-                <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold border-2 border-white rounded-full hover:bg-white hover:text-black hover-scale transition-all" aria-label="View more Abunto photos on Instagram">
+                <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-blue-500 border-2 border-blue-500 rounded-full hover:bg-blue-500 hover:text-white hover-scale transition-all" aria-label="View more Abunto photos on Instagram">
                     View More Photos On Instagram
                 </a>
             </div>
@@ -711,13 +711,13 @@
         <!-------------------------------->
         <!-- Contact Section -->
         <!-------------------------------->
-        <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-black" aria-label="Contact section with contact form and band contact information">
+        <section id="contact" class="py-20 bg-neutral-100" aria-label="Contact section with contact form and band contact information"> <!-- bg-gradient-to-b from-gray-900 to-black -->
             
             <!-- Outer Container -->
             <div class="container px-6 mx-auto">
 
                 <!-- Section Heading -->
-                <h2 class="text-5xl font-bold text-center mb-16 scroll-trigger">
+                <h2 class="text-5xl font-bold text-black text-center mb-16 scroll-trigger">
                     Get In Touch
                 </h2>
                 
@@ -730,10 +730,10 @@
                     <div class="scroll-trigger" aria-label="Band contact information and social links">
 
                         <!-- Subheading & Description -->
-                        <h3 class="text-2xl font-bold mb-6">
+                        <h3 class="text-2xl font-bold text-black mb-6">
                             Contact Us
                         </h3>
-                        <p class="text-gray-400 text-justify mb-8">
+                        <p class="text-neutral-500 text-justify mb-8">
                             For booking inquiries or just to say hello, fill out the form or reach out directly.
                         </p>
                         
@@ -742,14 +742,14 @@
 
                             <!-- Email -->
                             <div class="flex items-start" role="listitem">
-                                <div class="p-3 mr-4 rounded-full bg-pink-500">
+                                <div class="p-3 mr-4 rounded-full bg-green-500">
                                     <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold">
+                                    <h4 class="font-bold text-neutral-900">
                                         Email
                                     </h4>
-                                    <p class="text-gray-400">
+                                    <p class="text-gray-400 text-neutral-500">
                                         abunto.band@gmail.com
                                     </p>
                                 </div>
@@ -761,10 +761,10 @@
                                     <i class="fas fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold">
+                                    <h4 class="font-bold text-neutral-900">
                                         Management
                                     </h4>
-                                    <p class="text-gray-400">
+                                    <p class="text-neutral-500">
                                         +1 (720) 376-1542
                                     </p>
                                 </div>
@@ -772,14 +772,14 @@
                             
                             <!-- Office -->
                             <div class="flex items-start">
-                                <div class="p-3 mr-4 rounded-full bg-purple-500">
+                                <div class="p-3 mr-4 rounded-full bg-red-500">
                                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold">
+                                    <h4 class="font-bold text-neutral-900">
                                         Office
                                     </h4>
-                                    <p class="text-gray-400">
+                                    <p class="text-neutral-500">
                                         We Are Working On It
                                     </p>
                                 </div>
@@ -788,15 +788,17 @@
                         
                         <!-- Social Links -->
                         <div class="mt-8">
-                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <h4 class="text-xl font-bold text-black mb-4">
+                                Follow Us
+                            </h4>
                             <div class="flex space-x-4" aria-label="Social media links">
-                                <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all" aria-label="Follow Abunto on Instagram">
+                                <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full bg-black hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all" aria-label="Follow Abunto on Instagram">
                                     <i class="fab fa-instagram" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://www.youtube.com/@Abunto-Band" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-500 hover-scale transition-all" aria-label="Subscribe to Abunto on YouTube">
+                                <a href="https://www.youtube.com/@Abunto-Band" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full bg-black hover:bg-red-500 hover-scale transition-all" aria-label="Subscribe to Abunto on YouTube">
                                     <i class="fab fa-youtube" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://abunto.bandcamp.com/track/shloney-demo" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-500 hover-scale transition-all" aria-label="Listen to Abunto on Bandcamp">
+                                <a href="https://abunto.bandcamp.com/track/shloney-demo" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full bg-black hover:bg-green-500 hover-scale transition-all" aria-label="Listen to Abunto on Bandcamp">
                                     <i class="fab fa-bandcamp" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -816,26 +818,26 @@
                         
                             <!-- Name Input -->
                             <div>
-                                <label for="name" class="block mb-2 font-medium">
+                                <label for="name" class="block text-black mb-2 font-medium">
                                     Name
                                 </label>
-                                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all" />
+                                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required class="w-full px-4 py-3 bg-black border border-neutral-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" />
                             </div>
                         
                             <!-- Email Input -->
                             <div>
-                                <label for="email" class="block mb-2 font-medium">
+                                <label for="email" class="block text-black mb-2 font-medium">
                                     Email
                                 </label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all" />
+                                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required class="w-full px-4 py-3 bg-black border border-neutral-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" />
                             </div>
                         
                             <!-- Subject Selector -->
                             <div>
-                                <label for="subject" class="block mb-2 font-medium">
+                                <label for="subject" class="block text-black mb-2 font-medium">
                                     Subject
                                 </label>
-                                <select id="subject" name="subject" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                                <select id="subject" name="subject" required class="w-full px-4 py-3 bg-black border border-neutral-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                                     <option value="" disabled selected hidden>
                                         Select a subject
                                     </option>
@@ -853,14 +855,14 @@
                         
                             <!-- Message Input -->
                             <div>
-                                <label for="message" class="block mb-2 font-medium">
+                                <label for="message" class="block text-black mb-2 font-medium">
                                     Message
                                 </label>
-                                <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required class="w-full px-4 py-3 bg-black border border-neutral-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
                             </div>
                         
                             <!-- Submit Button -->
-                            <button type="submit" class="w-full px-6 py-3 font-bold bg-pink-600 rounded-lg hover:bg-pink-700 hover-scale transition-all">
+                            <button type="submit" class="w-full px-6 py-3 font-bold bg-blue-500 rounded-lg hover:bg-blue-400 hover-scale transition-all">
                                 Send Message
                             </button>
                         </form>
@@ -872,18 +874,18 @@
         <!-------------------------------->
         <!-- Newsletter Section -->
         <!-------------------------------->
-        <section class="py-16 bg-black" aria-label="Newsletter subscription section">
+        <section class="py-16 bg-neutral-100" aria-label="Newsletter subscription section">
 
             <!-- Outer Container -->
             <div class="container px-6 mx-auto max-w-4xl text-center scroll-trigger">
 
                 <!-- Heading -->
-                <h2 class="mb-6 text-3xl font-bold">
+                <h2 class="mb-6 text-3xl font-bold text-black">
                     Join Our Mailing List
                 </h2>
 
                 <!-- Subheading -->
-                <p class="mb-8 text-gray-400 max-w-2xl mx-auto">
+                <p class="mb-8 text-neutral-500 max-w-2xl mx-auto">
                     Be the first to know about new music, show dates, and exclusive content. No spam, we promise.
                 </p>
 
@@ -897,16 +899,16 @@
                     <label for="newsletter-email" class="sr-only">
                         Email Address
                     </label>
-                    <input type="email" id="newsletter-email" name="email" placeholder="Your email address" autocomplete="email" required class="flex-grow px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all" />
+                    <input type="email" id="newsletter-email" name="email" placeholder="Your email address" autocomplete="email" required class="flex-grow px-4 py-3 bg-black border border-neutral-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" />
 
                     <!-- Subscribe button -->
-                    <button type="submit" class="px-6 py-3 font-bold bg-pink-600 rounded-lg hover:bg-pink-700 hover-scale transition-all">
+                    <button type="submit" class="px-6 py-3 font-bold bg-blue-500 rounded-lg hover:bg-blue-400 hover-scale transition-all">
                         Subscribe
                     </button>
                 </form>
 
                 <!-- Disclaimer -->
-                <p class="mt-4 text-xs text-gray-500">
+                <p class="mt-4 text-xs text-neutral-500">
                     You’ll get occasional updates — no spam, just jams.
                 </p>
             </div>
@@ -924,48 +926,48 @@
                 <div class="flex flex-col items-center justify-between md:flex-row">
 
                     <!-- Logo / Brand -->
-                    <div class="mb-6 text-2xl font-bold gradient-text md:mb-0">
+                    <div class="mb-6 text-3xl font-bold gradient-text md:mb-0">
                         ABUNTO
                     </div>
                     
                     <!-- Navigation Links -->
                     <div class="mb-6 flex space-x-6 md:mb-0" aria-label="Footer navigation">
-                        <a href="#home" class="transition-colors hover:text-pink-500">
+                        <a href="#home" class="transition-colors hover:text-blue-500">
                             Home
                         </a>
-                        <a href="#about" class="ransition-colors hover:text-pink-500">
+                        <a href="#about" class="ransition-colors hover:text-blue-500">
                             About
                         </a>
-                        <a href="#music" class="transition-colors hover:text-pink-500">
+                        <a href="#music" class="transition-colors hover:text-blue-500">
                             Music
                         </a>
-                        <a href="#shows" class="transition-colors hover:text-pink-500">
+                        <a href="#shows" class="transition-colors hover:text-blue-500">
                             Shows
                         </a>
-                        <a href="#gallery" class="transition-colors hover:text-pink-500">
+                        <a href="#gallery" class="transition-colors hover:text-blue-500">
                             Gallery
                         </a>
-                        <a href="#contact" class="transition-colors hover:text-pink-500">
+                        <a href="#contact" class="transition-colors hover:text-blue-500">
                             Contact
                         </a>
                     </div>
                     
                     <!-- Social Links -->
                     <div class="flex space-x-4" aria-label="Abunto social media links">
-                        <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all" aria-label="Visit the Abunto Instagram">
+                        <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800 hover:bg-gradient-to-r from-purple-500 to-pink-500 hover-scale transition-all" aria-label="Visit the Abunto Instagram">
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.youtube.com/@Abunto-Band" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-red-500 hover-scale transition-all">
+                        <a href="https://www.youtube.com/@Abunto-Band" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800 hover:bg-red-500 hover-scale transition-all">
                             <i class="fab fa-youtube" aria-hidden="true"></i>
                         </a>
-                        <a href="https://abunto.bandcamp.com/track/shloney-demo" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-green-500 hover-scale transition-all">
+                        <a href="https://abunto.bandcamp.com/track/shloney-demo" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800 hover:bg-green-500 hover-scale transition-all">
                             <i class="fab fa-bandcamp" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
                 
                 <!-- Copyright -->
-                <div class="pt-8 mt-8 text-center border-t border-gray-800 text-gray-500">
+                <div class="pt-8 mt-8 text-center border-t border-gray-800">
                     <p>&copy; 2025 ABUNTO. All rights reserved (We Wish).</p>
                 </div>
             </div>
