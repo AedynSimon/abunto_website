@@ -426,7 +426,7 @@
                             <div class="space-y-2">
 
                                 <!-- Track 1 -->
-                                <div onmouseenter="playPreview('lover')" onmouseleave="pausePreview('lover')" onmousedown="playPreview('lover')" onmouseup="pausePreview('lover')" ontouchstart="playPreview('lover')" ontouchend="pausePreview('lover')" ontouchcancel="pausePreview('lover')">
+                                <div onmouseenter="if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) playPreview('lover')" onmouseleave="if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) pausePreview('lover')">
                                     <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1502s" target="_blank" rel="noopener noreferrer" aria-label="Play Don't Call Me Yr Lover on YouTube at timestamp 25:02">
                                         <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
                                             <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
@@ -445,7 +445,7 @@
                                 </div>
 
                                 <!-- Track 2 -->
-                                <div onmouseenter="playPreview('piqued')" onmouseleave="pausePreview('piqed')" onmousedown="playPreview('piqued')" onmouseup="pausePreview('piqued')" ontouchstart="playPreview('piqued')" ontouchend="pausePreview('piqued')" ontouchcancel="pausePreview('piqued')">
+                                <div onmouseenter="if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) playPreview('piqued')" onmouseleave="if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) pausePreview('piqued')">
                                     <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=280s" target="_blank" rel="noopener noreferrer" aria-label="Play Piqued on YouTube at timestamp 4:40">
                                         <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
                                             <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
@@ -464,7 +464,7 @@
                                 </div>
 
                                 <!-- Track 3 -->
-                                <div onmouseenter="playPreview('shloney')" onmouseleave="pausePreview('shloney')" onmousedown="playPreview('shloney')" onmouseup="pausePreview('shloney')" ontouchstart="playPreview('shloney')" ontouchend="pausePreview('shloney')" ontouchcancel="pausePreview('shloney')">
+                                <div onmouseenter="if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) playPreview('shloney')" onmouseleave="if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) pausePreview('shloney')">
                                     <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1176s" target="_blank" rel="noopener noreferrer" aria-label="Play Shloney on YouTube at timestamp 19:36">
                                         <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
                                             <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
@@ -1056,59 +1056,48 @@
             // Audio Preview on Track Hover
             // ----------------------------
 
-            // Prevent user from accidentally playing the track preview on mobile devices
-            function isTouchDevice() {
-                return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            // Detect if the device is hover-capable (i.e. desktop)
+            const isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+            // Function to play a preview (fade in)
+            function playPreview(id) {
+                if (!isDesktop) return;
+
+                const audio = document.getElementById(`${id}-preview`);
+                if (audio) {
+                    audio.currentTime = 0;
+                    audio.volume = 0;
+                    audio.play().then(() => {
+                        const fadeIn = setInterval(() => {
+                            if (audio.volume < 0.9) {
+                                audio.volume = Math.min(audio.volume + 0.1, 1);
+                            } else {
+                                clearInterval(fadeIn);
+                            }
+                        }, 50);
+                    }).catch((e) => {
+                        console.warn(`Audio play failed for ${id}:`, e);
+                    });
+                }
             }
 
-            let currentPreview = null; // track currently playing preview
+            // Function to pause a preview (fade out)
+            function pausePreview(id) {
+                if (!isDesktop) return;
 
-            // Play preview
-            function playPreview(id) {
                 const audio = document.getElementById(`${id}-preview`);
-                if (!audio) return;
-
-                // Stop any other preview playing
-                if (currentPreview && currentPreview !== audio) {
-                    currentPreview.pause();
-                    currentPreview.currentTime = 0;
-                    currentPreview.volume = 1;
-                }
-
-                currentPreview = audio;
-                audio.currentTime = 0;
-                audio.volume = 0;
-
-                audio.play().then(() => {
-                    // Fade in
-                    const fadeIn = setInterval(() => {
-                        if (audio.volume < 0.9) {
-                            audio.volume = Math.min(audio.volume + 0.1, 1);
+                if (audio) {
+                    const fadeOut = setInterval(() => {
+                        if (audio.volume > 0.1) {
+                            audio.volume = Math.max(audio.volume - 0.1, 0);
                         } else {
-                            clearInterval(fadeIn);
+                            clearInterval(fadeOut);
+                            audio.pause();
+                            audio.currentTime = 0;
+                            audio.volume = 1; // Reset volume
                         }
                     }, 50);
-                }).catch((err) => {
-                    console.warn(`Preview play failed: ${err}`);
-                });
-            }
-
-            // Pause preview
-            function pausePreview(id) {
-                const audio = document.getElementById(`${id}-preview`);
-                if (!audio || audio !== currentPreview) return;
-
-                const fadeOut = setInterval(() => {
-                    if (audio.volume > 0.1) {
-                        audio.volume = Math.max(audio.volume - 0.1, 0);
-                    } else {
-                        clearInterval(fadeOut);
-                        audio.pause();
-                        audio.currentTime = 0;
-                        audio.volume = 1;
-                        currentPreview = null;
-                    }
-                }, 50);
+                }
             }
         </script>
     </body>
