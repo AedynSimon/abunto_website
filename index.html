@@ -426,7 +426,7 @@
                             <div class="space-y-2">
 
                                 <!-- Track 1 -->
-                                <div onmouseenter="playPreview('lover')" onmouseleave="pausePreview('lover')">
+                                <div onmouseenter="playPreview('lover')" onmouseleave="pausePreview('lover')" ontouchstart="playPreview('lover')" ontouchend="pausePreview('lover')">
                                     <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1502s" target="_blank" rel="noopener noreferrer" aria-label="Play Don't Call Me Yr Lover on YouTube at timestamp 25:02">
                                         <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
                                             <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
@@ -445,7 +445,7 @@
                                 </div>
 
                                 <!-- Track 2 -->
-                                <div onmouseenter="playPreview('piqued')" onmouseleave="pausePreview('piqued')">
+                                <div onmouseenter="playPreview('piqued')" onmouseleave="pausePreview('piqued')" ontouchstart="playPreview('piqued')" ontouchend="pausePreview('piqued')">
                                     <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=280s" target="_blank" rel="noopener noreferrer" aria-label="Play Piqued on YouTube at timestamp 4:40">
                                         <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
                                             <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
@@ -464,7 +464,7 @@
                                 </div>
 
                                 <!-- Track 3 -->
-                                <div onmouseenter="playPreview('shloney')" onmouseleave="pausePreview('shloney')">
+                                <div onmouseenter="playPreview('shloney')" onmouseleave="pausePreview('shloney')" ontouchstart="playPreview('shloney')" ontouchend="pausePreview('shloney')">
                                     <a href="https://www.youtube.com/watch?v=xpgBOUuLqHM&t=1176s" target="_blank" rel="noopener noreferrer" aria-label="Play Shloney on YouTube at timestamp 19:36">
                                         <div class="flex items-center p-3 bg-neutral-900 rounded-lg hover:bg-neutral-800 hover-scale transition-all">
                                             <div class="mr-4 flex w-10 h-10 items-center justify-center rounded-full bg-blue-500">
@@ -948,7 +948,7 @@
                     </div>
                     
                     <!-- Navigation Links -->
-                    <div class="mb-6 flex space-x-6 md:mb-0" aria-label="Footer navigation">
+                    <div class="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-center md:mb-0" aria-label="Footer navigation">
                         <a href="#home" class="transition-colors hover:text-blue-500">
                             Home
                         </a>
@@ -1056,29 +1056,47 @@
             // Audio Preview on Track Hover
             // ----------------------------
 
-            // Play short audio preview when user hovers over a track
+            // Prevent user from accidentally playing the track preview on mobile devices
+            function isTouchDevice() {
+                return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            }
+
+            // Play preview (for both hover and touch start)
             function playPreview(id) {
                 const audio = document.getElementById(`${id}-preview`);
                 if (audio) {
-                audio.currentTime = 0;
-                audio.play();
+                    // Reset to beginning and fade in
+                    audio.currentTime = 0;
+                    audio.volume = 0;
+                    audio.play().then(() => {
+                        // Fade in the volume gradually
+                        const fadeIn = setInterval(() => {
+                            if (audio.volume < 0.9) {
+                                audio.volume = Math.min(audio.volume + 0.1, 1);
+                            } else {
+                                clearInterval(fadeIn);
+                            }
+                        }, 50);
+                    }).catch((err) => {
+                        console.warn(`Error playing audio preview for ${id}:`, err);
+                    });
                 }
             }
 
-            // Pauses and resets the audio preview when the user stops hovering
+            // Pause and reset preview (for both hover leave and touch end)
             function pausePreview(id) {
                 const audio = document.getElementById(`${id}-preview`);
                 if (audio) {
                     const fadeOut = setInterval(() => {
                         if (audio.volume > 0.1) {
-                            audio.volume -= 0.1;
+                            audio.volume = Math.max(audio.volume - 0.1, 0);
                         } else {
                             clearInterval(fadeOut);
                             audio.pause();
                             audio.currentTime = 0;
-                            audio.volume = 1; // reset for next play
+                            audio.volume = 1; // Reset volume
                         }
-                    }, 30);
+                    }, 50);
                 }
             }
         </script>
