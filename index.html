@@ -51,9 +51,10 @@
         <style>
             /* ------------------- Base Effects ------------------- */
 
-            /* Prevent Overflow on Small Screens */
+            /* Prevent Overflow on Small Screens w/Smooth Scrolling */
             html {
                 overflow-x: hidden;
+                scroll-behavior: smooth;
             }
 
             /* Smooth Scroll-Trigger Entrance */
@@ -115,7 +116,7 @@
                 to { transform: rotate(360deg); }
             }
 
-            /* Infinite Gradient Change */
+            /* Infinite Gradient Text Change */
             .gradient-text {
                 /* background: linear-gradient(45deg, #ff3366, #ff8a33, #33ff57, #33aaff, #cc33ff); */
                 background: linear-gradient(45deg, #ff69b4, #bc69ff, #8269ff, #7369ff, #6996ff, #69daff, #69ffa5);
@@ -136,7 +137,7 @@
     <!-------------------------------->
     <!-- Body -->
     <!-------------------------------->
-    <body class="overflow-x-hidden bg-neutral-100 font-mono text-white cursor-default">
+    <body class="overflow-x-hidden bg-neutral-200 font-mono text-white cursor-default">
 
         <!-------------------------------->
         <!-- Navigation -->
@@ -215,10 +216,10 @@
         <!-------------------------------->
         <!-- Hero Section -->
         <!-------------------------------->
-        <section id="home" role="region" class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat md:bg-fixed" style="background-image: url('/assets/hero/abunto_hero.jpeg');" aria-label="Hero section with site intro action buttons">
+        <section id="home" role="region" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat md:bg-fixed" style="background-image: url('/assets/hero/abunto_hero.jpeg');" aria-label="Hero section with site intro action buttons">
 
             <!-- Background Overlay -->
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
             <!-- Hero Content -->
             <div class="container px-4 sm:px-6 z-10 mx-auto text-center max-w-screen-sm scroll-trigger">
@@ -245,12 +246,40 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Glow + Card positioned bottom-left -->
+            <a href="#shows" class="absolute bottom-10 left-10 z-20 scroll-trigger group">
+
+                <!-- Actual Card with white glow using custom shadow -->
+                <div class="p-4 rounded-2xl bg-neutral-800 bg-opacity-30 backdrop-blur-md border border-neutral-700 shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 ease-in-out group-hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] group-hover:scale-105 group-hover:backdrop-blur-xl">
+                    <div class="flex items-center">
+
+                        <!-- Icon Container -->
+                        <div class="=p-3 rounded-lg mr-3 bg-white w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center transition-transform duration-300 ease-in-out">
+                            <i class="fas fa-users font-bold text-xl sm:text-2xl md:text-3xl text-blue-500"></i>
+                        </div>
+
+                        <!-- Event Info -->
+                        <div>
+                            <p class="text-xs sm:text-sm md:text-base text-neutral-400">
+                                Next Show
+                            </p>
+                            <p class="text-sm sm:text-base md:text-lg font-bold text-neutral-100">
+                                May 2nd 2025
+                            </p>
+                            <p class="text-xs sm:text-sm md:text-base text-neutral-400">
+                                254 Linden St | The Coast
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </section>
         
         <!-------------------------------->
         <!-- About Section -->
         <!-------------------------------->
-        <section id="about" class="py-20 bg-neutral-100" aria-label="About section with member cards and band story"> <!-- bg-gradient-to-b from-black to-gray-900 -->
+        <section id="about" class="py-20" aria-label="About section with member cards and band story"> <!-- bg-gradient-to-b from-black to-gray-900 -->
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -552,7 +581,7 @@
         <!-------------------------------->
         <!-- Shows Section -->
         <!-------------------------------->
-        <section id="shows" class="py-20 bg-neutral-100" aria-label="Shows section with upcoming shows and events">
+        <section id="shows" class="py-20" aria-label="Shows section with upcoming shows and events">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -623,7 +652,7 @@
         <!-------------------------------->
         <!-- Gallery Section -->
         <!-------------------------------->
-        <section id="gallery" class="py-20 bg-neutral-100" aria-label="Band photo and performance gallery section"> <!-- bg-gradient-to-b from-black to-gray-900 -->
+        <section id="gallery" class="py-20" aria-label="Band photo and performance gallery section"> <!-- bg-gradient-to-b from-black to-gray-900 -->
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -765,7 +794,7 @@
         <!-------------------------------->
         <!-- Contact Section -->
         <!-------------------------------->
-        <section id="contact" class="py-20 bg-neutral-100" aria-label="Contact section with contact form and band contact information"> <!-- bg-gradient-to-b from-gray-900 to-black -->
+        <section id="contact" class="py-20" aria-label="Contact section with contact form and band contact information"> <!-- bg-gradient-to-b from-gray-900 to-black -->
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -936,7 +965,7 @@
         <!-------------------------------->
         <!-- Newsletter Section -->
         <!-------------------------------->
-        <section class="py-16 bg-neutral-100" aria-label="Newsletter subscription section">
+        <section class="py-16" aria-label="Newsletter subscription section">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto max-w-4xl text-center scroll-trigger">
