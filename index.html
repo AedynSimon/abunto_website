@@ -159,23 +159,29 @@
 
                     <!-- Desktop Navigation Menu -->
                     <div class="hidden md:flex space-x-8" role="navigation" aria-label="Desktop site navigation">
-                        <a href="#home" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to homepage section">
+                        <a href="#home" data-link="home" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to homepage section">
                             Home
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#about" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to about section">
+                        <a href="#about" data-link="about" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to about section">
                             About
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#music" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to music section">
+                        <a href="#music" data-link="music" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to music section">
                             Music
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#shows" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to shows section">
+                        <a href="#shows" data-link="shows" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to shows section">
                             Shows
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#gallery" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to gallery section">
+                        <a href="#gallery" data-link="gallery" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to gallery section">
                             Gallery
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
-                        <a href="#contact" class="transition-colors hover:text-blue-500 hover-scale" aria-label="Go to contact section">
+                        <a href="#contact" data-link="contact" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to contact section">
                             Contact
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </div>
 
@@ -219,7 +225,7 @@
         <section id="home" role="region" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat md:bg-fixed" style="background-image: url('/assets/hero/abunto_hero.jpeg');" aria-label="Hero section with site intro action buttons">
 
             <!-- Background Overlay -->
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
 
             <!-- Hero Content -->
             <div class="container px-4 sm:px-6 z-10 mx-auto text-center max-w-screen-sm scroll-trigger">
@@ -236,7 +242,7 @@
                 <div class="flex justify-center space-x-4">
 
                     <!-- Instagram Button -->
-                    <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-white transition-all rounded-full bg-blue-500 hover:bg-blue-400 hover-scale transition duration-300 ease-in-out" aria-label="Go to Abunto Instagram page">
+                    <a href="https://www.instagram.com/abunto.official/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold transition-all rounded-full bg-blue-500 hover:bg-blue-400 hover-scale transition duration-300 ease-in-out" aria-label="Go to Abunto Instagram page">
                         Instagram
                     </a>
 
@@ -251,23 +257,23 @@
             <a href="#shows" class="absolute bottom-10 left-10 z-20 scroll-trigger group">
 
                 <!-- Actual Card with white glow using custom shadow -->
-                <div class="p-4 rounded-2xl bg-neutral-800 bg-opacity-30 backdrop-blur-md border border-neutral-700 shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 ease-in-out group-hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] group-hover:scale-105 group-hover:backdrop-blur-xl">
+                <div class="p-4 rounded-2xl bg-white bg-opacity-30 backdrop-blur-sm border border-neutral-700 shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 ease-in-out group-hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] group-hover:scale-105 group-hover:backdrop-blur-xl">
                     <div class="flex items-center">
 
                         <!-- Icon Container -->
-                        <div class="=p-3 rounded-lg mr-3 bg-white w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center transition-transform duration-300 ease-in-out">
+                        <div class="p-3 rounded-lg mr-3 bg-neutral-200 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center transition-transform duration-300 ease-in-out">
                             <i class="fas fa-users font-bold text-xl sm:text-2xl md:text-3xl text-blue-500"></i>
                         </div>
 
                         <!-- Event Info -->
                         <div>
-                            <p class="text-xs sm:text-sm md:text-base text-neutral-400">
+                            <p class="text-xs sm:text-sm md:text-base text-neutral-200">
                                 Next Show
                             </p>
                             <p class="text-sm sm:text-base md:text-lg font-bold text-neutral-100">
                                 May 2nd 2025
                             </p>
-                            <p class="text-xs sm:text-sm md:text-base text-neutral-400">
+                            <p class="text-xs sm:text-sm md:text-base text-neutral-200">
                                 254 Linden St | The Coast
                             </p>
                         </div>
@@ -1078,6 +1084,37 @@
         <!-- JavaScript -->
         <!-------------------------------->
         <script>
+            // ----------------------------
+            // Nav Underline
+            // ----------------------------
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            function onScroll() {
+                let current = "";
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    const span = link.querySelector(".underline-indicator");
+                    if (link.dataset.link === current) {
+                        span.classList.add("w-full");
+                        link.classList.add("text-blue-500");
+                    } else {
+                        span.classList.remove("w-full");
+                        link.classList.remove("text-blue-500");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", onScroll);
+
             // ----------------------------
             // Mobile Menu Toggle (Responsive Nav)
             // ----------------------------
