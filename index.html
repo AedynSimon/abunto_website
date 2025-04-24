@@ -16,7 +16,7 @@
         <meta name="robots" content="index, follow">
         <meta name="author" content="Abunto">
         <meta name="description" content="Abunto is a progressive disco rock band blending disco, funk, jazz, soul, and rock to create a progressive sound. Listen to our music, check out our shows, and join our party.">
-        <meta name="keywords" content="Abunto, Abunto Official, Abunto Band, Abunto Website, Abunto Merch, Abunto Merchandise, Abunto Shirts, Abunto T-shirts, Abunto Stickers, Abunto Music, Abunto Tour, Abunto Live, Abunto Recording, Abunto Spotify, Abunto Apple Music, Abunto Instagram, Abunto YouTube, Abunto Bandcamp, Music, Live Music, Progressive, Disco, Funk, Jazz, Soul, Rock, Pop, Hip-hop, Blues, Indie, Grunge, Reggae, Afrobeat, Live Music, FOCO, FOCOMX, Fort Collins, FOCO Music, Fort Collins Music, FOCO Live Music, Fort Collins Live Music, Denver, Denver Music, Denver Live Music, Colorado, Colorado Music, Colorado Live Music, CSU, Colorado State Univerisity, Jenison Brown, Aidan Flanagan, Isaac Hermanson, Aedyn Simon, Guitar, Singer, Keys, Piano, Bass, Drums, Spotify, Apple Music, Instagram, YouTube, Bandcamp, Aggie, Washingtons, The Coast">
+        <meta name="keywords" content="Abunto, Abunto Official, Abunto Band, Abunto Website, Abunto Merch, Abunto Merchandise, Abunto Shirts, Abunto T-shirts, Abunto Stickers, Abunto Music, Abunto Tour, Abunto Live, Abunto Recording, Abunto Spotify, Abunto Apple Music, Abunto Instagram, Abunto YouTube, Abunto Bandcamp, Music, Live Music, Progressive, Disco, Funk, Jazz, Soul, Rock, Pop, Hip-hop, Blues, Indie, Grunge, Reggae, Afrobeat, Live Music, FOCO, FOCOMX, Fort Collins, FOCO Music, Fort Collins Music, FOCO Live Music, Fort Collins Live Music, Denver, Denver Music, Denver Live Music, Colorado, Colorado Music, Colorado Live Music, CSU, Colorado State University, Jenison Brown, Aidan Flanagan, Isaac Hermanson, Aedyn Simon, Guitar, Singer, Keys, Piano, Bass, Drums, Spotify, Apple Music, Instagram, YouTube, Bandcamp, Aggie, Washingtons, The Coast">
         <link rel="canonical" href="https://abunto-official.com">
 
         <!-- Open Graph / Facebook Meta -->
@@ -158,7 +158,7 @@
                     </div>
 
                     <!-- Desktop Navigation Menu -->
-                    <div class="hidden md:flex space-x-8" role="navigation" aria-label="Desktop site navigation">
+                    <div class="hidden lg:flex space-x-8" role="navigation" aria-label="Desktop site navigation">
                         <a href="#home" data-link="home" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to homepage section">
                             Home
                             <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
@@ -179,6 +179,10 @@
                             Gallery
                             <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                         </a>
+                        <a href="#merchandise" data-link="merchandise" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to merchandise section">
+                            Merchandise
+                            <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
                         <a href="#contact" data-link="contact" class="nav-link relative group transition-colors duration-300 ease-in-out hover:text-blue-500" aria-label="Go to contact section">
                             Contact
                             <span class="underline-indicator absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
@@ -186,7 +190,7 @@
                     </div>
 
                     <!-- Mobile Menu Button (Hamburger Icon) -->
-                    <div class="md:hidden">
+                    <div class="lg:hidden">
                         <button id="menu-btn" class="text-white focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
                             <i class="text-2xl fas fa-bars" aria-hidden="true"></i>
                         </button>
@@ -195,7 +199,7 @@
             </div>
             
             <!-- Mobile Navigation Menu (Dropdown) -->
-            <div id="mobile-menu" class="hidden md:hidden px-6 py-4" role="navigation" aria-label="Mobile site navigation">
+            <div id="mobile-menu" class="hidden lg:hidden px-6 py-4" role="navigation" aria-label="Mobile site navigation">
                 <div class="flex flex-col space-y-4">
                     <a href="#home" class="transition-colors hover:text-blue-500" aria-label="Go to homepage section">
                         Home
@@ -211,6 +215,9 @@
                     </a>
                     <a href="#gallery" class="transition-colors hover:text-blue-500" aria-label="Go to gallery section">
                         Gallery
+                    </a>
+                    <a href="#merchandise" class="transition-colors hover:text-blue-500" aria-label="Go to merchandise section">
+                        Merchandise
                     </a>
                     <a href="#contact" class="transition-colors hover:text-blue-500" aria-label="Go to contact section">
                         Contact
@@ -257,7 +264,7 @@
             <a href="#shows" class="absolute bottom-5 left-5 z-20  scroll-trigger group">
 
                 <!-- Actual Card with white glow using custom shadow -->
-                <div class="p-4 rounded-2xl bg-white bg-opacity-30 backdrop-blur-sm border border-neutral-700 shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-all duration-300 ease-in-out group-hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] group-hover:scale-105">
+                <div class="p-4 rounded-2xl bg-white bg-opacity-20 backdrop-blur-xs transition-all duration-300 ease-in-out group-hover:shadow-[0_0_10px_rgba(255,255,255,0.4)] group-hover:scale-105">
                     <div class="flex items-center">
 
                         <!-- Icon Container -->
@@ -285,7 +292,7 @@
         <!-------------------------------->
         <!-- About Section -->
         <!-------------------------------->
-        <section id="about" class="py-20" aria-label="About section with member cards and band story">
+        <section id="about" role="region" class="py-20" aria-label="About section with member cards and band story">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -323,7 +330,7 @@
                         <p class="text-justify leading-relaxed text-neutral-500">
                             Jenison wrangles tone like a mad scientist and slings riffs with a grin sharp enough to cut tape. Raised listening to weirdo pop and garage rock in northern California, he crawled into the Colorado music scene with two bands, spilling fuzz and melody in equal amounts. He fronts Abunto whilst designing the flyers, running socials, and crafting songs. He is currently sharpening his teeth at CSU in jazz guitar and graphic design. Because chaos needs structure. Or maybe the other way around. 
                             <a href="https://www.instagram.com/jenison_brown/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-bold text-blue-500 hover-scale" aria-label="Visit Jenisons Instagram">View his Instagram
-                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="hhtp://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
                             </a>
@@ -350,7 +357,7 @@
                         <p class="text-justify leading-relaxed text-neutral-500">
                             Virtuoso pianist known for blistering solos and innovative licks that push the boundaries of funk disco. Raised in a small igloo in Alaska, he moved to Fort Collins Colorado to study neuroscience and music at CSU incorporating his knowledge of psychology with his expressive playing to tickle your brain while he tickles the ivories. 
                             <a href="https://www.instagram.com/ak.flanagan/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-bold text-blue-500 hover-scale" aria-label="Visit Aidans Instagram">View his Instagram
-                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="hhtp://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
                             </a>
@@ -377,7 +384,7 @@
                         <p class="text-justify leading-relaxed text-neutral-500">
                             The groove master who lays down the foundation with melodic bass lines and beautiful harmonies. Home grown in Alaska, he moved to Fort Collins Colorado to study music at CSU spending all of his time perfecting his craft and becoming a master of his instrument. He is the youngest person to ever win a nobel prize for his well known ability to be a "human clock".
                             <a href="https://www.instagram.com/isaachorm/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-bold text-blue-500 hover-scale" aria-label="Visit Isaacs Instagram">View his Instagram
-                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="hhtp://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
                             </a>
@@ -404,7 +411,7 @@
                         <p class="text-justify leading-relaxed text-neutral-500">
                             He hits circles with sticks bringing energy and creativity from behind the drumset. Only a short drive from Denver Colorado, Aedyn moved to Fort Collins Colorado where he studies computer science and music where he used his programming skills to create the Abunto website.
                             <a href="https://www.instagram.com/aedyn_simon/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-bold text-blue-500 hover-scale" aria-label="Visit Aedyns Instagram">View his Instagram
-                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="hhtp://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.ord/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
                             </a>
@@ -434,12 +441,12 @@
                         </p>
                     
                         <!-- Quote Box -->
-                        <blockquote class="p-8 bg-neutral-900 rounded-xl hover-shadow-scale" aria-label="Quote from Jenison Brown">
+                        <blockquote class="p-8 bg-black rounded-xl hover-shadow-scale" aria-label="Quote from Jenison Brown">
                             <p class="text-justify mb-4">
-                                "We started as four friends in the CSU jazz program. After jamming together, we knew we had something unique. We are all constantly pushing ourselves to be the best musicians we can to create the best music we can.”
+                                "An Abunto is the only chance I have to feel good even though I feel bad.”
                             </p>
                             <footer class="text-right font-bold text-blue-500">
-                                - Jenison Brown
+                                - Aedyn Simon
                             </footer>
                         </blockquote>
                     </div>
@@ -450,7 +457,7 @@
         <!-------------------------------->
         <!-- Music Section -->
         <!-------------------------------->
-        <section id="music" role="region" class="py-20 bg-black relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat md:bg-fixed" style="background-image: url('/assets/music/abunto_background.jpeg');" aria-label="Music section with featured tracks and band links">
+        <section id="music" role="region" class="py-20 bg-black relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat md:bg-fixed" style="background-image: url('/assets/music/aggie_backgroung.jpeg');" aria-label="Music section with featured tracks and band links">
 
             <div class="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
             
@@ -589,7 +596,7 @@
         <!-------------------------------->
         <!-- Shows Section -->
         <!-------------------------------->
-        <section id="shows" class="py-20" aria-label="Shows section with upcoming shows and events">
+        <section id="shows" role="region" class="py-20" aria-label="Shows section with upcoming shows and events">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -688,7 +695,7 @@
         <!-------------------------------->
         <!-- Gallery Section -->
         <!-------------------------------->
-        <section id="gallery" class="py-20" aria-label="Band photo and performance gallery section">
+        <section id="gallery" role="region" class="py-20" aria-label="Band photo and performance gallery section">
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -826,11 +833,102 @@
                 </a>
             </div>
         </section>
+
+        <!-------------------------------->
+        <!-- Merchandise Section -->
+        <!-------------------------------->
+        <section id="merchandise" role="region" class="py-20" aria-label="Merchandise section with items for sale">
+
+            <!-- Outer Container -->
+            <div class="container px-4 sm:px-6 mx-auto">
+
+                <!-- Section Title -->
+                <h2 id="merch-heading" class="mb-4 text-5xl sm:text-6xl md:text-7xl font-bold text-black text-center scroll-trigger">
+                    Merchandise
+                </h2>
+
+                <!-- Underline Section Title -->
+                <div class="mb-12 w-56 sm:w-64 md:w-80 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto scroll-trigger" aria-hidden="true"></div>
+
+                <!-- Grid Wrapper: Center the merch grid -->
+                <div class="flex justify-center">
+
+                    <!-- Merchandise Grid -->
+                    <div class="flex flex-wrap justify-center gap-10 scroll-trigger max-w-6xl mx-auto" role="list" aria-label="Available Abunto merchandise items">
+
+                        <!-- Merch Item 1 -->
+                        <article role="listitem" class="bg-black rounded-xl overflow-hidden hover-scale transition-all p-4 text-center w-80 flex flex-col justify-between" aria-labelledby="shirt-title" aria-describedby="shirt-desc">
+                            
+                            <!-- Merch Image -->
+                            <img src="/assets/merchandise/abunto_shirt.jpeg" alt="Abunto T-shirt" class="w-full h-64 object-cover mb-4 rounded-lg" loading="lazy" />
+
+                            <!-- Title -->
+                            <h3 id="shirt-title" class="text-2xl font-bold mb-2">
+                                Abunto T-Shirt
+                            </h3>
+
+                            <!-- Description -->
+                            <div id="shirt-desc">
+                                <p class="text-neutral-400 mb-4">
+                                    Soft, breathable, and will make you 20 times more attractive once worn.
+                                </p>
+                                <p class="text-neutral-400 mb-4">
+                                    Available in Unisex sizes Small | Medium | Large
+                                </p>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="mt-auto">
+                                <a href="#contact" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 font-bold bg-blue-500 rounded-full hover:bg-blue-400 transition-all" aria-label="Buy Abunto T-Shirt for $25. Opens contact section">
+                                    $25 Each
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Merch Item 2 -->
+                        <article role="listitem" class="bg-black rounded-xl overflow-hidden hover-scale transition-all p-4 text-center w-80 flex flex-col justify-between" aria-labelledby="sticker-title" aria-describedby="sticker-desc">
+                            
+                            <!-- Merch Image -->
+                            <img src="/assets/merchandise/abunto_sticker.jpeg" alt="Abunto sticker" class="w-full h-64 object-cover mb-4 rounded-lg" loading="lazy" />
+
+                            <!-- Title -->
+                            <h3 id="sticker-title" class="text-2xl font-bold mb-2">
+                                Abunto Sticker
+                            </h3>
+
+                            <!-- Description -->
+                            <div id="sticker-desc">
+                                <p class="text-neutral-400 mb-4">
+                                    Slap them on your gear, bottle, laptop, or face for extra style points.
+                                </p>
+                                <p class="text-neutral-400 mb-4">
+                                    Can be purchased individually or in custom pack sizes
+                                </p>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="mt-auto">
+                                <a href="#contact" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 font-bold bg-blue-500 rounded-full hover:bg-blue-400 transition-all" aria-label="Buy Abunto Sticker for $2. Opens contact section">
+                                    $2 Each
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Call-to-Action Button -->
+                <div class="mt-12 text-center scroll-trigger">
+                    <a href="#contact" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 font-bold text-blue-500 border-2 border-blue-500 rounded-full hover:bg-blue-500 hover:text-white hover-scale transition-all" aria-label="View more Abunto photos on Instagram">
+                        Contact Us For Purchase
+                    </a>
+                </div>
+            </div>
+        </section>
         
         <!-------------------------------->
         <!-- Contact Section -->
         <!-------------------------------->
-        <section id="contact" class="py-20" aria-label="Contact section with contact form and band contact information">
+        <section id="contact" role="region" class="py-20" aria-label="Contact section with contact form and band contact information">
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -1001,7 +1099,7 @@
         <!-------------------------------->
         <!-- Newsletter Section -->
         <!-------------------------------->
-        <section class="py-16" aria-label="Newsletter subscription section">
+        <section role="region" class="py-16" aria-label="Newsletter subscription section">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto max-w-4xl text-center scroll-trigger">
