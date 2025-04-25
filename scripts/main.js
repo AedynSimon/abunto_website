@@ -40,6 +40,8 @@ const mobileMenu = document.getElementById('mobile-menu');
 // Toggle 'hidden' class on click to show/hide the modile menu
 menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu.classList.toggle('hidden');
 });
 
 // ----------------------------
@@ -137,3 +139,13 @@ function pausePreview(id) {
         }, 50);
     }
 }
+
+// ----------------------------
+// Dynamic Footer Year
+// ----------------------------
+
+document.addEventListener("DOMContentLoaded", function() {
+    const yearSpan = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+});
