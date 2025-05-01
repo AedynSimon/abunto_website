@@ -292,7 +292,7 @@
         <!-------------------------------->
         <!-- About Section -->
         <!-------------------------------->
-        <section id="about" role="region" class="py-20" aria-label="About section with member cards and band story">
+        <section id="about" role="region" class="py-20 scroll-trigger" aria-label="About section with member cards and band story">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -596,7 +596,7 @@
         <!-------------------------------->
         <!-- Shows Section -->
         <!-------------------------------->
-        <section id="shows" role="region" class="py-20" aria-label="Shows section with upcoming shows and events">
+        <section id="shows" role="region" class="py-20 scroll-trigger" aria-label="Shows section with upcoming shows and events">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -692,7 +692,7 @@
         <!-------------------------------->
         <!-- Gallery Section -->
         <!-------------------------------->
-        <section id="gallery" role="region" class="py-20" aria-label="Band photo and performance gallery section">
+        <section id="gallery" role="region" class="py-20 scroll-trigger" aria-label="Band photo and performance gallery section">
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -834,7 +834,7 @@
         <!-------------------------------->
         <!-- Merchandise Section -->
         <!-------------------------------->
-        <section id="merchandise" role="region" class="py-20" aria-label="Merchandise section with items for sale">
+        <section id="merchandise" role="region" class="py-20 scroll-trigger" aria-label="Merchandise section with items for sale">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -925,7 +925,7 @@
         <!-------------------------------->
         <!-- Contact Section -->
         <!-------------------------------->
-        <section id="contact" role="region" class="py-20" aria-label="Contact section with contact form and band contact information">
+        <section id="contact" role="region" class="py-20 scroll-trigger" aria-label="Contact section with contact form and band contact information">
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -1096,7 +1096,7 @@
         <!-------------------------------->
         <!-- Newsletter Section -->
         <!-------------------------------->
-        <section role="region" class="py-16" aria-label="Newsletter subscription section">
+        <section role="region" class="py-20 scroll-trigger" aria-label="Newsletter subscription section">
 
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto max-w-4xl text-center scroll-trigger">
@@ -1147,7 +1147,7 @@
         <!-------------------------------->
         <!-- Footer -->
         <!-------------------------------->
-        <footer class="py-12 bg-black" aria-label="Footer with navigation and social links">
+        <footer class="py-8 bg-black scroll-trigger" aria-label="Footer with navigation and social links">
             
             <!-- Outer Container -->
             <div class="container px-4 sm:px-6 mx-auto">
@@ -1251,8 +1251,10 @@
 
             // Toggle 'hidden' class on click to show/hide the modile menu
             menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                const newState = !isExpanded;
+
+                menuBtn.setAttribute('aria-expanded', String(newState));
                 mobileMenu.classList.toggle('hidden');
             });
 
