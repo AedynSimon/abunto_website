@@ -1,6 +1,6 @@
 # Abunto Website
 
-Welcome to my personal portfolio website! This project showcases my skills, experience, and projects in software development. The website is built using HTML, CSS, and JavaScript, with a responsive design for various screen sizes.
+Welcome to Abunto's professional website!
 
 ---
 
