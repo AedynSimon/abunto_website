@@ -37,10 +37,12 @@ window.addEventListener("scroll", onScroll);
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-// Toggle 'hidden' class on click to show/hide the modile menu
+// Toggle 'hidden' class on click to show/hide the mobile menu
 menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    const newState = !isExpanded;
+
+    menuBtn.setAttribute('aria-expanded', String(newState));
     mobileMenu.classList.toggle('hidden');
 });
 
