@@ -39,10 +39,8 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 // Toggle 'hidden' class on click to show/hide the mobile menu
 menuBtn.addEventListener('click', () => {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    const newState = !isExpanded;
-
-    menuBtn.setAttribute('aria-expanded', String(newState));
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!expanded));
     mobileMenu.classList.toggle('hidden');
 });
 
