@@ -33,18 +33,29 @@ window.addEventListener("scroll", onScroll);
 // Mobile Menu Toggle (Responsive Nav)
 // ----------------------------
 
-// Grab the menue button (hamburger icon) and the mobile menu container
+// Grab the menu button (hamburger icon) and the mobile menu container
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-// Toggle 'hidden' class on click to show/hide the mobile menu
-menuBtn.addEventListener('click', () => {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    const newState = !isExpanded;
+// Expose setupMobileMenu for testing environments
+function setupMobileMenu(button, menu) {
+    if (!button || !menu) return;
+    button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const newState = !isExpanded;
 
-    menuBtn.setAttribute('aria-expanded', String(newState));
-    mobileMenu.classList.toggle('hidden');
-});
+        button.setAttribute('aria-expanded', String(newState));
+        menu.classList.toggle('hidden');
+    });
+}
+
+// Toggle 'hidden' class on click to show/hide the mobile menu
+setupMobileMenu(menuBtn, mobileMenu);
+
+// Export for Node (tests)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { setupMobileMenu };
+}
 
 // ----------------------------
 // Scroll Trigger Animation (Intersection Observer)
