@@ -61,7 +61,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // Scroll Trigger Animation (Intersection Observer)
 // ----------------------------
 
-// Select all elements that should animate when scolled into view
+// Select all elements that should animate when scrolled into view
 const scrollTriggers = document.querySelectorAll('.scroll-trigger');
 
 // Create an IntersectionObserver to detect when each element becomes visible
