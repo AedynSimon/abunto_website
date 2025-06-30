@@ -33,7 +33,7 @@ window.addEventListener("scroll", onScroll);
 // Mobile Menu Toggle (Responsive Nav)
 // ----------------------------
 
-// Grab the menue button (hamburger icon) and the mobile menu container
+// Grab the menu button (hamburger icon) and the mobile menu container
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -50,7 +50,7 @@ menuBtn.addEventListener('click', () => {
 // Scroll Trigger Animation (Intersection Observer)
 // ----------------------------
 
-// Select all elements that should animate when scolled into view
+// Select all elements that should animate when scrolled into view
 const scrollTriggers = document.querySelectorAll('.scroll-trigger');
 
 // Create an IntersectionObserver to detect when each element becomes visible
